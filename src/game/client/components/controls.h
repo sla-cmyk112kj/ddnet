@@ -64,5 +64,9 @@ private:
 	static void ConTpDummyToCursor(IConsole::IResult *pResult, void *pUserData);
 	vec2 CursorWorldPos() const;
 	void SendPracticeTeleportToCursor(int Conn);
+
+	// Practice helper: freeze avoidance (local/LAN servers only)
+	bool AvoidFreezeAllowed() const;
+	bool AvoidFreeze(CNetObj_PlayerInput *pInput);
 };
 #endif
